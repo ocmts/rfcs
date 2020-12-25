@@ -21,3 +21,15 @@ export class Product extends Biz.ActiveRecord {
 
 Define the database table in TypeScript class, so we can query it from frontend in a typesafe way without any hassle. 
 No backend api controller needed, no extra frontend model class needed.
+
+# Detailed Design
+
+There are following minimal functionalities to finish a whole process
+
+* create a AWS mysql database if not created yet
+* reset the database with latest table schema
+* init the table with data from json file
+* deploy a backend api to AWS lambda, expose http
+* a frontend sdk to query via http
+
+
